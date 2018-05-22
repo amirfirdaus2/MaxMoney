@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Max Money</string>
+
+
+    //spinner declaration
+    <string name="spin_id_nationality">Choose Nationality</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="done">DONE</string>
+
+    <string name="screen1_title">Best Rate</string>
+    <string name="screen1_desc">Best rate guaranteed always</string>
+
+
+    <string name="screen2_title">Safe and Convenient</string>
+    <string name="screen2_desc">Send money abroad with safety and convenience</string>
+
+
+    <string name="screen3_title">Quick Transfer</string>
+    <string name="screen3_desc">Transfer funds online quickly to more then 190 countries worldwide</string>
+
+    <string name="screen4_title">Home Delivery</string>
+    <string name="screen4_desc">Home delivery with in 3 hours</string>
+
+    <string name="Login">Log in</string>
+    <string name="appbar_scrolling_view_behavior" />
+</resources>

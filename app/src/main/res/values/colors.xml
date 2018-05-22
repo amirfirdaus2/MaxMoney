@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--Screen BG color-->
+    <color name = "bg_lay06">#FFFFFF</color>
+    <color name = "bg_lay07">#FFFFFF</color>
+    <color name = "bg_lay08">#FFFFFF</color>
+    <color name = "bg_lay09">#FFFFFF</color>
+    <color name = "dark_grey">#e0e0e0</color>
+    <color name = "darker_grey">#9e9e9e</color>
+    <!--dots activated-->
+    <color name="dot_active_06">#3F51B5</color>
+    <color name="dot_active_07">#3F51B5</color>
+    <color name="dot_active_08">#3F51B5</color>
+    <color name="dot_active_09">#3F51B5</color>
+
+    <!--dots deactivated-->
+    <color name="dot_inactive_06">#e0e0e0</color>
+    <color name="dot_inactive_07">#e0e0e0</color>
+    <color name="dot_inactive_08">#e0e0e0</color>
+    <color name="dot_inactive_09">#e0e0e0</color>
+
+    <array name="array_active">
+        <item>@color/dot_active_06</item>
+        <item>@color/dot_active_07</item>
+        <item>@color/dot_active_08</item>
+        <item>@color/dot_active_09</item>
+    </array>
+
+    <array name="array_inactive">
+        <item>@color/dot_inactive_06</item>
+        <item>@color/dot_inactive_07</item>
+        <item>@color/dot_inactive_08</item>
+        <item>@color/dot_inactive_09</item>
+
+    </array>
+</resources>
