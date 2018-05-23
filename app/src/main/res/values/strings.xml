@@ -4,8 +4,6 @@
 
     //spinner declaration
     <string name="spin_id_nationality">Choose Nationality</string>
-    <string name="title_activity_welcome">Home Screen</string>
-    <string name="sign_in">SIGN IN</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="done">DONE</string>
@@ -24,7 +22,6 @@
     <string name="screen4_title">Home Delivery</string>
     <string name="screen4_desc">Home delivery with in 3 hours</string>
 
-    <string name="Login">Log in</string>
     <string name="appbar_scrolling_view_behavior" />
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
