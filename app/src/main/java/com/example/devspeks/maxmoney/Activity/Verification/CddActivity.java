@@ -35,6 +35,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 
+import static android.os.Build.VERSION_CODES.LOLLIPOP;
+
 public class CddActivity extends AppCompatActivity {
     private int GALLERY_DOCUMENT_FRONT = 11;
     private int CAMERA_DOCUMENT_FRONT = 12;

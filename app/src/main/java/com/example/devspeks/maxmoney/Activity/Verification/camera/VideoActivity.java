@@ -268,7 +268,6 @@ public class VideoActivity extends AppCompatActivity {
                             // UI
                             button.setText("stop");
                             mIsRecordingVideo = true;
-
                             // Start recording
                             mMediaRecorder.start();
                         }
@@ -288,6 +287,7 @@ public class VideoActivity extends AppCompatActivity {
         }
 
     }
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void setUpMediaRecorder() throws IOException {
         mMediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
         mMediaRecorder.setVideoSource(MediaRecorder.VideoSource.SURFACE);
@@ -298,7 +298,7 @@ public class VideoActivity extends AppCompatActivity {
         mMediaRecorder.setOutputFile(file.toString());
         mMediaRecorder.setVideoEncodingBitRate(10000000);
         mMediaRecorder.setVideoFrameRate(30);
-//        mMediaRecorder.setVideoSize(mVideoSize.getWidth(), mVideoSize.getHeight());
+   //     mMediaRecorder.setVideoSize(mVideoSize.getWidth(), mVideoSize.getHeight());
         mMediaRecorder.setVideoEncoder(MediaRecorder.VideoEncoder.H264);
         mMediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
         int rotation =getWindowManager().getDefaultDisplay().getRotation();

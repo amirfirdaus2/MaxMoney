@@ -106,7 +106,8 @@ public class LoginActivity extends AppCompatActivity {
                                         if(obj.getString("status").equals("false")){
                                             Toast.makeText(getApplicationContext(),obj.getString("message"),Toast.LENGTH_SHORT).show();
                                         }else {
-                                            Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
+                                            Intent next = new Intent(getApplicationContext(),MainActivity.class);
+                                            startActivity(next);
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
