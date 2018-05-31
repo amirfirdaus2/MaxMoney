@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.ContentValues;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Typeface;
@@ -19,7 +18,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -27,15 +25,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.devspeks.maxmoney.Activity.LoginActivity;
-import com.example.devspeks.maxmoney.Activity.Verification.camera.VideoActivity;
+import com.example.devspeks.maxmoney.Activity.LoginActivity_old;
 import com.example.devspeks.maxmoney.R;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-
-import static android.os.Build.VERSION_CODES.LOLLIPOP;
 
 public class CddActivity extends AppCompatActivity {
     private int GALLERY_DOCUMENT_FRONT = 11;

@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devspeks.maxmoney.Activity.LoginActivity;
+import com.example.devspeks.maxmoney.Activity.LoginActivity_old;
 import com.example.devspeks.maxmoney.R;
 
 public class AccountVerificationActivity extends AppCompatActivity {

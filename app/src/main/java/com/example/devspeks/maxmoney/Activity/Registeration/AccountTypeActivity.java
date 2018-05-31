@@ -1,8 +1,6 @@
 package com.example.devspeks.maxmoney.Activity.Registeration;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.devspeks.maxmoney.Activity.LoginActivity;
+import com.example.devspeks.maxmoney.Activity.LoginActivity_old;
 import com.example.devspeks.maxmoney.Activity.Registeration.UserDetailsPersonal.UserDetailsPersonalActivity;
 import com.example.devspeks.maxmoney.R;
 
@@ -37,7 +36,7 @@ public class AccountTypeActivity extends AppCompatActivity {
         button_select = findViewById(R.id.button_select);
         imgView_cancel = findViewById(R.id.imageView_cancel);
         imgView_back = findViewById(R.id.imageView_back);
-        intent_back = new Intent(getApplicationContext(),MainRegisterActivity.class);
+        intent_back = new Intent(getApplicationContext(),LoginActivity.class);
         intent_cancel = new Intent(getApplicationContext(), LoginActivity.class);
         intent_select_personal = new Intent(getApplicationContext(), UserDetailsPersonalActivity.class);
 

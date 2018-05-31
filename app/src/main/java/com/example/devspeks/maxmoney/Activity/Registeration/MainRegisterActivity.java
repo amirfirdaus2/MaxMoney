@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.devspeks.maxmoney.Common.Validation;
-import com.example.devspeks.maxmoney.Activity.LoginActivity;
+import com.example.devspeks.maxmoney.Activity.LoginActivity_old;
 import com.example.devspeks.maxmoney.R;
 
 public class MainRegisterActivity extends AppCompatActivity {
@@ -30,7 +30,7 @@ public class MainRegisterActivity extends AppCompatActivity {
         txtView_login = findViewById(R.id.textView_login);
         txtView_member = findViewById(R.id.textView_member);
         button_register = findViewById(R.id.button_register);
-        intent_login = new Intent(getApplicationContext(), LoginActivity.class);
+        intent_login = new Intent(getApplicationContext(), LoginActivity_old.class);
         intent_accType = new Intent(getApplicationContext(), AccountTypeActivity.class);
         imgView_cancel = findViewById(R.id.imageView_cancel);
         editText_email = findViewById(R.id.editText_email);

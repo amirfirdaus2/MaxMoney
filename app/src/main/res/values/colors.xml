@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-
+    <color name="colorSame">#0470C5</color>
     <!--Screen BG color-->
     <color name = "bg_lay06">#FFFFFF</color>
     <!--dots activated-->

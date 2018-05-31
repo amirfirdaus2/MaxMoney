@@ -15,14 +15,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.devspeks.maxmoney.Activity.LoginActivity;
 import com.example.devspeks.maxmoney.Activity.Registeration.AccountTypeActivity;
 import com.example.devspeks.maxmoney.Activity.Registeration.AddressActivity;
 import com.example.devspeks.maxmoney.Common.Validation;
-import com.example.devspeks.maxmoney.Activity.LoginActivity;
+import com.example.devspeks.maxmoney.Activity.LoginActivity_old;
 import com.example.devspeks.maxmoney.R;
 import com.toptoche.searchablespinnerlibrary.SearchableSpinner;
 
