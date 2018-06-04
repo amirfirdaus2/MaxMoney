@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.devspeks.maxmoney">
+    package="com.mobile.app.maxmoney">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -25,11 +25,7 @@
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.LoginActivity_old"
@@ -61,7 +57,13 @@
             android:theme="@style/AppThemeFullScreen" />
         <activity
             android:name=".Activity.Verification.camera.VideoActivity"
-            android:theme="@style/AppThemeFullScreen"></activity>
+            android:theme="@style/AppThemeFullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Activity.Introduction.IntroScreenActivity"
             android:theme="@style/AppThemeFullScreen" />
