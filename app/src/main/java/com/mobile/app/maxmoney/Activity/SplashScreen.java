@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.mobile.app.maxmoney.Activity.Introduction.IntroScreenActivity;
 import com.mobile.app.maxmoney.R;
+import com.mobile.app.maxmoney.Utils.PreferenceManagerLogin;
 
 public class SplashScreen extends AppCompatActivity {
     TextView textMobile,ph1,ph2;
@@ -20,10 +21,13 @@ public class SplashScreen extends AppCompatActivity {
     private int progressStatus = 0;
     private Handler handler = new Handler();
     Intent MainActivityGo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
+
+
 
         //declaration
         textMobile = findViewById(R.id.textView_mobile);
@@ -31,17 +35,14 @@ public class SplashScreen extends AppCompatActivity {
         ph2 = findViewById(R.id.textView_ph2);
         progressBar = findViewById(R.id.progressBar);
         MainActivityGo = new Intent(getApplicationContext(),IntroScreenActivity.class);
-
         //set font type avenir
         textMobile.setTypeface(Typeface.createFromAsset(getAssets(), "Avenir-Light-07.ttf"));
         ph1.setTypeface(Typeface.createFromAsset(getAssets(), "Avenir-Light-07.ttf"));
         ph2.setTypeface(Typeface.createFromAsset(getAssets(), "Avenir-Light-07.ttf"));
-
         //build version more than lolipop only
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             progressBar.setProgressTintList(ColorStateList.valueOf(Color.WHITE));
         }
-
         //progressBar function
         progressBarFunctionality();
     }

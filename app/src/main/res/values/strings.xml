@@ -4,6 +4,7 @@
 
     //spinner declaration
     <string name="spin_id_nationality">Choose Nationality</string>
+    <string name="spin_id_country">Choose Country</string>
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="done">DONE</string>

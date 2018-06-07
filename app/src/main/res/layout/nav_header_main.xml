@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
 
     android:layout_marginTop="20dp"
+    android:background="@color/colorSame"
     android:gravity="center_vertical|center_horizontal"
     android:orientation="vertical"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
@@ -53,7 +54,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="varun@maxmoney.com"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@android:color/white" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -62,7 +63,7 @@
                         android:paddingTop="@dimen/nav_header_vertical_spacing"
                         android:text="online"
                         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                        android:textColor="@android:color/black" />
+                        android:textColor="@android:color/white" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -89,9 +90,11 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="0.5dp"
         android:layout_marginTop="20dp"
-        android:background="#cfcfcf"
-        android:orientation="vertical"></LinearLayout>
+        android:background="@color/colorBlack"
+        android:orientation="vertical">
+
+    </LinearLayout>
 
 </LinearLayout>

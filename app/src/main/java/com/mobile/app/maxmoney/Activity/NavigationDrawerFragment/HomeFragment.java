@@ -1,15 +1,12 @@
 package com.mobile.app.maxmoney.Activity.NavigationDrawerFragment;
 
 
-import android.content.res.AssetManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,9 +42,9 @@ public class HomeFragment extends Fragment {
         tabLayout = v.findViewById(R.id.tab_layout);
         tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#000000"));
         tabLayout.addTab(tabLayout.newTab().setText("Foreign Exchange"));
-        tabLayout.addTab(tabLayout.newTab().setText("Money Transfer"));
+        tabLayout.addTab(tabLayout.newTab().setText("Money Transfer"));/*
         tabLayout.getTabAt(0).setIcon(ICONS[0]);
-        tabLayout.getTabAt(1).setIcon(ICONS[1]);
+        tabLayout.getTabAt(1).setIcon(ICONS[1]);*/
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         setCustomFont();

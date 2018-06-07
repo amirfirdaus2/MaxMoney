@@ -20,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.mobile.app.maxmoney.Activity.LoginActivity;
+import com.mobile.app.maxmoney.Activity.MainActivity;
 import com.mobile.app.maxmoney.R;
 
 public class IntroScreenActivity extends AppCompatActivity {
@@ -124,7 +125,7 @@ public class IntroScreenActivity extends AppCompatActivity {
 
     private void launchHomeScreen() {
         preferenceManager.setIsFirstTimeLaunch(false);
-        startActivity(new Intent(IntroScreenActivity.this, LoginActivity.class));
+        startActivity(new Intent(IntroScreenActivity.this, MainActivity.class));
         finish();
     }
 

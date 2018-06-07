@@ -7,7 +7,14 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorSame</item>
         <item name="colorPrimaryDark">@color/colorSame</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorSame</item>
+    </style>
+
+    <style name="AppThemeActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorSame</item>
+        <item name="colorPrimaryDark">@color/colorSame</item>
+        <item name="colorAccent">@color/colorSame</item>
     </style>
 
     <!-- Base application theme No Action Bar FullScreen -->
@@ -22,4 +29,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="NavigationView"  parent="Base.Theme.AppCompat">
+        <item name="android:listDivider">@color/colorBlack</item>
+    </style>`enter code here`
 </resources>

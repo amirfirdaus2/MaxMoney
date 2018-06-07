@@ -20,10 +20,13 @@ import com.mobile.app.maxmoney.Activity.NavigationDrawerFragment.HomeFragment;
 import com.mobile.app.maxmoney.Activity.NavigationDrawerFragment.ProfileFragment;
 import com.mobile.app.maxmoney.Common.CustomTypefaceSpan;
 import com.mobile.app.maxmoney.R;
+import com.mobile.app.maxmoney.Utils.PreferenceManagerLogin;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     NavigationView navigationView;
+    PreferenceManagerLogin session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +35,15 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
 
 
+        session = new PreferenceManagerLogin(getApplicationContext());
+        if(session.checkLogin()){
+            finish();
+        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         Menu m = navigationView.getMenu();
@@ -92,6 +98,8 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.sideMenu_profile){
             fragment = new ProfileFragment();
             displaySelectedFragment(fragment);
+        }else if(id == R.id.sideMenu_exit){
+            session.logoutUser();
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

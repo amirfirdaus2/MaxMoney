@@ -22,9 +22,7 @@
             android:icon="@drawable/ic_history"
             android:title="Transaction History" />
     </group>
-
-
-    <group android:checkableBehavior="none" android:id="@+id/menu_bottom">
+    <group android:checkableBehavior="single" android:id="@+id/menu_bottom">
         <item
             android:icon="@drawable/ic_refer_friend"
             android:title="Refer a Friend" >
@@ -34,5 +32,11 @@
             android:title="Setting" >
         </item>
     </group>
-
+    <group android:checkableBehavior="single" android:id="@+id/menu_bottom_2">
+        <item
+            android:id="@+id/sideMenu_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Log Out" >
+        </item>
+    </group>
 </menu>

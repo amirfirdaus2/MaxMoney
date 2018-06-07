@@ -23,6 +23,7 @@ import com.mobile.app.maxmoney.Activity.Registeration.AccountTypeActivity;
 import com.mobile.app.maxmoney.Common.Validation;
 import com.mobile.app.maxmoney.Model.LoginAPI;
 import com.mobile.app.maxmoney.R;
+import com.mobile.app.maxmoney.Utils.PreferenceManagerLogin;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -39,6 +40,7 @@ import retrofit.client.Response;
 import static com.mobile.app.maxmoney.Common.BasedURL.ROOT_URL;
 
 public class LoginActivity extends AppCompatActivity implements Animation.AnimationListener {
+
     LinearLayout linearLayout_front,linearLayout_back;
     RelativeLayout relativeLayout_id;
     private Animation animation;
@@ -49,12 +51,15 @@ public class LoginActivity extends AppCompatActivity implements Animation.Animat
     Boolean statusLayout = false;
     Intent intent_accType;
     private static long back_pressed;
+    PreferenceManagerLogin session;
+
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in_and_sign_up);
 
+        session = new PreferenceManagerLogin(getApplicationContext());
 
         relative_id_hide = findViewById(R.id.relative_id_hide);
         relativeLayout_id = findViewById(R.id.relative_id);
@@ -179,6 +184,7 @@ public class LoginActivity extends AppCompatActivity implements Animation.Animat
                                         if(obj.getString("status").equals("false")){
                                             Toast.makeText(getApplicationContext(),obj.getString("message"),Toast.LENGTH_SHORT).show();
                                         }else {
+                                            session.createLoginSession(obj.getString("token"),editText_email.getText().toString(),editText_password.getText().toString());
                                             Intent next = new Intent(getApplicationContext(),MainActivity.class);
                                             startActivity(next);
                                         }
@@ -244,7 +250,7 @@ public class LoginActivity extends AppCompatActivity implements Animation.Animat
     @Override
     public void onBackPressed()
     {
-        if (back_pressed + 2000 > System.currentTimeMillis()) super.onBackPressed();
+        if (back_pressed + 2000 > System.currentTimeMillis())  moveTaskToBack(true);
         else Toast.makeText(getBaseContext(), "Press once again to exit!", Toast.LENGTH_SHORT).show();
         back_pressed = System.currentTimeMillis();
     }
