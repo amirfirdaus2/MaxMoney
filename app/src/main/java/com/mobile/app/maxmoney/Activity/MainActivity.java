@@ -18,6 +18,7 @@ import android.view.MenuItem;
 
 import com.mobile.app.maxmoney.Activity.NavigationDrawerFragment.HomeFragment;
 import com.mobile.app.maxmoney.Activity.NavigationDrawerFragment.ProfileFragment;
+import com.mobile.app.maxmoney.Activity.NavigationDrawerFragment.TransactionHistoryFragment;
 import com.mobile.app.maxmoney.Common.CustomTypefaceSpan;
 import com.mobile.app.maxmoney.R;
 import com.mobile.app.maxmoney.Utils.PreferenceManagerLogin;
@@ -98,7 +99,10 @@ public class MainActivity extends AppCompatActivity
         }else if(id == R.id.sideMenu_profile){
             fragment = new ProfileFragment();
             displaySelectedFragment(fragment);
-        }else if(id == R.id.sideMenu_exit){
+        }else if(id == R.id.sideMenu_history){
+            fragment = new TransactionHistoryFragment();
+            displaySelectedFragment(fragment);
+        } else if(id == R.id.sideMenu_exit){
             session.logoutUser();
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

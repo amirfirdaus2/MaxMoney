@@ -7,11 +7,14 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.mobile.app.maxmoney.Common.CustomTypefaceSpan;
 import com.mobile.app.maxmoney.R;
 import com.mobile.app.maxmoney.Utils.PagerAdapter;
 
@@ -23,7 +26,10 @@ public class HomeFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActivity().setTitle("Home");
+        Typeface font2 = Typeface.createFromAsset(getActivity().getAssets(), "Avenir-Roman-12.ttf");
+        SpannableStringBuilder SS = new SpannableStringBuilder("Home");
+        SS.setSpan (new CustomTypefaceSpan("", font2), 0, SS.length(), Spanned.SPAN_EXCLUSIVE_INCLUSIVE);
+        getActivity().setTitle(SS);
 
     }
 
@@ -33,43 +39,29 @@ public class HomeFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_home, container, false);
 
         final int[] ICONS = new int[]{
-                R.drawable.ic_foreign,
-                R.drawable.ic_mtransfer
+                R.drawable.ic_foreign, R.drawable.ic_mtransfer
         };
-
 
 
         tabLayout = v.findViewById(R.id.tab_layout);
         tabLayout.setTabTextColors(Color.parseColor("#000000"), Color.parseColor("#000000"));
         tabLayout.addTab(tabLayout.newTab().setText("Foreign Exchange"));
-        tabLayout.addTab(tabLayout.newTab().setText("Money Transfer"));/*
-        tabLayout.getTabAt(0).setIcon(ICONS[0]);
-        tabLayout.getTabAt(1).setIcon(ICONS[1]);*/
+        tabLayout.addTab(tabLayout.newTab().setText("Money Transfer"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         setCustomFont();
 
-
         final ViewPager viewPager = v.findViewById(R.id.pager);
-        final PagerAdapter adapter = new PagerAdapter
-                (getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
+        final PagerAdapter adapter = new PagerAdapter(getActivity().getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager.setCurrentItem(tab.getPosition());
-            }
-
+            public void onTabSelected(TabLayout.Tab tab) {viewPager.setCurrentItem(tab.getPosition());}
             @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
+            public void onTabUnselected(TabLayout.Tab tab) { }
             @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
+            public void onTabReselected(TabLayout.Tab tab) {}
         });
         return v;
 
@@ -81,14 +73,10 @@ public class HomeFragment extends Fragment {
 
         for (int j = 0; j < tabsCount; j++) {
             ViewGroup vgTab = (ViewGroup) vg.getChildAt(j);
-
             int tabChildsCount = vgTab.getChildCount();
-
             for (int i = 0; i < tabChildsCount; i++) {
                 View tabViewChild = vgTab.getChildAt(i);
                 if (tabViewChild instanceof TextView) {
-                    //Put your font in assests folder
-                    //assign name of the font here (Must be case sensitive)
                     ((TextView) tabViewChild).setTypeface(Typeface.createFromAsset(getActivity().getAssets(), "Avenir-Roman-12.ttf"));
                     ((TextView) tabViewChild).setTextSize(8);
                 }

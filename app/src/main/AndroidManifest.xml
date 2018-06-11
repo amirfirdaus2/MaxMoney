@@ -29,6 +29,7 @@
             android:theme="@style/AppThemeFullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,7 +63,7 @@
             android:theme="@style/AppThemeFullScreen" />
         <activity
             android:name=".Activity.Verification.camera.VideoActivity"
-            android:theme="@style/AppThemeFullScreen"></activity>
+            android:theme="@style/AppThemeFullScreen" />
         <activity
             android:name=".Activity.Introduction.IntroScreenActivity"
             android:theme="@style/AppThemeFullScreen" />
@@ -70,14 +71,13 @@
             android:name=".Activity.MainActivity"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeNoActionBar">
-        </activity>
+            android:theme="@style/AppThemeNoActionBar" />
         <activity
             android:name=".Activity.LoginActivity"
-            android:theme="@style/AppThemeFullScreen"></activity>
-        <activity android:name=".Activity.NavigationDrawerFragment.HomeTabs.ForeignExchangeBuy.BuyForeignExchange"
-            android:theme="@style/AppThemeActionBar">
-        </activity>
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".Activity.NavigationDrawerFragment.HomeTabs.ForeignExchangeBuy.BuyForeignExchange"
+            android:theme="@style/AppThemeActionBar" />
     </application>
 
 </manifest>
